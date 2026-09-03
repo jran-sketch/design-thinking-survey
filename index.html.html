@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TF팀 합류 지원서</title>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <style>
+        :root {
+            --primary-color: #2563EB;
+            --primary-hover: #1D4ED8;
+            --bg-color: #F3F4F6;
+            --card-bg: #FFFFFF;
+            --text-main: #111827;
+            --text-sub: #4B5563;
+            --border-color: #E5E7EB;
+        }
+
+        body {
+            font-family: 'Pretendard', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .form-container {
+            background-color: var(--card-bg);
+            max-width: 800px;
+            width: 100%;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            padding: 40px;
+            box-sizing: border-box;
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--bg-color);
+        }
+
+        .form-header h1 {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .form-header p {
+            font-size: 15px;
+            color: var(--text-sub);
+            word-break: keep-all;
+        }
+
+        .question-group {
+            margin-bottom: 35px;
+        }
+
+        .question-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .question-desc {
+            font-size: 13px;
+            color: var(--text-sub);
+            margin-top: -8px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .input-row {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .input-row > div {
+            flex: 1;
+        }
+
+        input[type="text"], select, textarea {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 15px;
+            box-sizing: border-box;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        input[type="text"]:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* Radio Card Design */
+        .radio-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+        }
+
+        .radio-card {
+            display: block;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .radio-card input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .radio-content {
+            display: flex;
+            flex-direction: column;
+            padding: 16px;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            background-color: var(--card-bg);
+            transition: all 0.2s;
+        }
+
+        .radio-content .title {
+            font-weight: 600;
+            font-size: 15px;
+            margin-bottom: 4px;
+        }
+
+        .radio-content .desc {
+            font-size: 13px;
+            color: var(--text-sub);
+        }
+
+        .radio-card input:checked ~ .radio-content {
+            border-color: var(--primary-color);
+            background-color: #EFF6FF;
+        }
+
+        .radio-card:hover .radio-content {
+            border-color: #93C5FD;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 16px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            margin-top: 20px;
+        }
+
+        .submit-btn:hover {
+            background-color: var(--primary-hover);
+        }
+
+        @media (max-width: 600px) {
+            .input-row {
+                flex-direction: column;
+            }
+            .form-container {
+                padding: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <div class="form-header">
+            <h1>[창의적사고와혁신] 실전 프로젝트 TF팀 합류 지원서</h1>
+            <p>본 설문은 한 학기 동안 함께 서비스를 혁신할 '최적의 실무 TF팀'을 구성하기 위한 기초 데이터입니다. 여러분의 직무적 강점과 관심 산업군을 솔직하게 적어주세요.</p>
+        </div>
+
+        <form action="#" method="POST">
+            
+            <!-- 문항 1. 기본 정보 -->
+            <div class="question-group">
+                <label class="question-title">1. 기본 정보</label>
+                <div class="input-row">
+                    <div>
+                        <input type="text" placeholder="이름" required>
+                    </div>
+                    <div>
+                        <input type="text" placeholder="학번" required>
+                    </div>
+                    <div>
+                        <input type="text" placeholder="전공" required>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 문항 2. 타겟 산업군 -->
+            <div class="question-group">
+                <label class="question-title">2. 내가 가장 혁신해보고 싶은 '타겟 산업군'은?</label>
+                <span class="question-desc">나와 같은 산업군에 관심 있는 동료들과 우선 매칭됩니다. (1지망, 2지망 필수 선택)</span>
+                <div class="input-row">
+                    <div>
+                        <select required>
+                            <option value="" disabled selected>1지망 선택</option>
+                            <option value="fintech">핀테크 / 금융 (토스, 은행 앱 등)</option>
+                            <option value="commerce">유통 / 커머스 (무신사, 당근, 쿠팡 등)</option>
+                            <option value="fb">푸드테크 / F&B (배민, 캐치테이블, 사이렌오더 등)</option>
+                            <option value="content">콘텐츠 / 엔터테인먼트 (넷플릭스, 웹툰, 팬덤 앱 등)</option>
+                            <option value="mobility">모빌리티 / 트래블 (지도 앱, 카카오T, 야놀자 등)</option>
+                            <option value="lifestyle">라이프스타일 / 에듀테크 (에타, 캘린더 앱, 노션 등)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <select required>
+                            <option value="" disabled selected>2지망 선택</option>
+                            <option value="fintech">핀테크 / 금융 (토스, 은행 앱 등)</option>
+                            <option value="commerce">유통 / 커머스 (무신사, 당근, 쿠팡 등)</option>
+                            <option value="fb">푸드테크 / F&B (배민, 캐치테이블, 사이렌오더 등)</option>
+                            <option value="content">콘텐츠 / 엔터테인먼트 (넷플릭스, 웹툰, 팬덤 앱 등)</option>
+                            <option value="mobility">모빌리티 / 트래블 (지도 앱, 카카오T, 야놀자 등)</option>
+                            <option value="lifestyle">라이프스타일 / 에듀테크 (에타, 캘린더 앱, 노션 등)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 문항 3. 역할 -->
+            <div class="question-group">
+                <label class="question-title">3. 이번 프로젝트에서 내가 실무진으로서 훈련하고 싶은 '역할'은?</label>
+                <span class="question-desc">다양한 직무가 섞이도록 팀을 구성하는 데 사용됩니다.</span>
+                <div class="radio-grid">
+                    <label class="radio-card">
+                        <input type="radio" name="role" value="pm" required>
+                        <div class="radio-content">
+                            <span class="title">PM (기획자)</span>
+                            <span class="desc">전체 방향성을 잡고 문제를 정의하며 팀을 이끌고 싶다.</span>
+                        </div>
+                    </label>
+                    <label class="radio-card">
+                        <input type="radio" name="role" value="design">
+                        <div class="radio-content">
+                            <span class="title">UX/UI 디자이너</span>
+                            <span class="desc">와이어프레임과 시각적 결과물을 구현하며 유저 경험을 설계하고 싶다.</span>
+                        </div>
+                    </label>
+                    <label class="radio-card">
+                        <input type="radio" name="role" value="marketing">
+                        <div class="radio-content">
+                            <span class="title">마케터 / 전략가</span>
+                            <span class="desc">유저 리서치를 담당하고, 서비스 홍보 및 발표 피칭을 리드하고 싶다.</span>
+                        </div>
+                    </label>
+                    <label class="radio-card">
+                        <input type="radio" name="role" value="data">
+                        <div class="radio-content">
+                            <span class="title">데이터 / 엔지니어</span>
+                            <span class="desc">논리적인 분석으로 타당성을 입증하고 실현 가능한 솔루션을 구조화하고 싶다.</span>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <!-- 문항 4. 작업 스타일 -->
+            <div class="question-group">
+                <label class="question-title">4. 팀 프로젝트에서 나의 작업 스타일(협업 MBTI)은?</label>
+                <div class="radio-grid">
+                    <label class="radio-card">
+                        <input type="radio" name="style" value="planner" required>
+                        <div class="radio-content">
+                            <span class="title">파워 계획형</span>
+                            <span class="desc">마감은 생명! 며칠 전부터 미리 뼈대를 세워두는 편</span>
+                        </div>
+                    </label>
+                    <label class="radio-card">
+                        <input type="radio" name="style" value="rusher">
+                        <div class="radio-content">
+                            <span class="title">벼락치기형</span>
+                            <span class="desc">데드라인이 곧 영감! 마감 직전 엄청난 몰입을 발휘하는 편</span>
+                        </div>
+                    </label>
+                    <label class="radio-card">
+                        <input type="radio" name="style" value="ideator">
+                        <div class="radio-content">
+                            <span class="title">아이디어 뱅크형</span>
+                            <span class="desc">일단 던지고 보자! 회의할 때 아이디어를 쉴 새 없이 뿜어내는 편</span>
+                        </div>
+                    </label>
+                    <label class="radio-card">
+                        <input type="radio" name="style" value="artisan">
+                        <div class="radio-content">
+                            <span class="title">장인형</span>
+                            <span class="desc">조용히 강하다! 내가 맡은 시각화, 문서화 작업의 디테일을 끝장내는 편</span>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <!-- 문항 5. 페인 포인트 -->
+            <div class="question-group">
+                <label class="question-title">5. 최근 이용하면서 '아, 이거 진짜 너무 불편한데?' 라고 느꼈던 서비스나 앱이 있다면 자유롭게 적어주세요.</label>
+                <span class="question-desc">팀 주제 선정의 시드(Seed) 아이디어가 됩니다.</span>
+                <textarea placeholder="예: A배달앱의 필터 기능이 너무 복잡해서 원하는 음식을 찾기 힘들었습니다..." required></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">지원서 제출하기</button>
+        </form>
+    </div>
+
+</body>
+</html>
